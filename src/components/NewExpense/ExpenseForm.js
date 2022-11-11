@@ -1,29 +1,30 @@
-import './ExpenseForm.css'
-const ExpenseForm = () =>{
+import "./ExpenseForm.css";
+const ExpenseForm = () => {
+  const titleChangeHandler = () => {
+    console.log("Title changed");
+  };
 
-    const titleChangeHandler = ()=>{
-
-    }
-
-return <form>
-    <div className="new-expense__controls">
+  return (
+    <form>
+      <div className="new-expense__controls">
         <div className="new-expense__control">
-            <label>Title</label>
-            <input type='text' onChange={titleChangeHandler} />
+          <label>Title</label>
+          <input type="text" onChange={titleChangeHandler} />
         </div>
         <div className="new-expense__control">
-            <label>Amount</label>
-            <input type='number' min='0.01' step='0.01'/>
+          <label>Amount</label>
+          <input type="number" min="0.01" step="0.01" />
         </div>
         <div className="new-expense__control">
-            <label>Date</label>
-            <input type='date' min="2019-01-01" max="2022-12-31" />
+          <label>Date</label>
+          <input type="date" min="2019-01-01" max="2022-12-31" />
         </div>
-    </div>
-    <div className='new-expense__actions'>
+      </div>
+      <div className="new-expense__actions">
         <button>Add Expense</button>
-    </div>
-</form>
-}
+      </div>
+    </form>
+  );
+};
 
 export default ExpenseForm;
